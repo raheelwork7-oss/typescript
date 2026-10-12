@@ -129,8 +129,68 @@ class Product {
     private price: number,
   ) {}
 
-  
+
+  showPrice(): number {
+    return this.price;
+  }
 }
 
 const product = new Product("Keyboard", 4500);
 console.log(product.name, product.showPrice());
+
+// 7) Getter and setter example
+
+class Person {
+  private _name: string;
+
+  constructor(name: string) {
+    this._name = name;
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(newName: string) {
+    this._name = newName;
+  }
+}
+
+const person = new Person("Ayesha");
+console.log(person.name);
+person.name = "Sara";
+console.log(person.name);
+
+// 8) Static member example
+
+class School {
+  static name: string = "City School";
+
+  static showName(): string {
+    return School.name;
+  }
+}
+
+console.log(School.showName());
+
+// 9) Abstract class and method example
+
+abstract class Shape {
+  abstract area(): number;
+}
+
+class Rectangle extends Shape {
+  constructor(
+    private width: number,
+    private height: number,
+  ) {
+    super();
+  }
+
+  area(): number {
+    return this.width * this.height;
+  }
+}
+
+const rectangle = new Rectangle(4, 5);
+console.log(rectangle.area());

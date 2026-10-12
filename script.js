@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// 1) Class and object - example 1
+
+           // 1) Class and object - example 1
+
+
 class Student {
     name;
     course;
@@ -9,8 +12,9 @@ class Student {
         this.course = course;
     }
 }
-const student = new Student("Ali", "TypeScript");
+const student = new Student("Ali", "Css");
 console.log(student.name, "is learning", student.course);
+
 // Example 2
 class Car {
     brand;
@@ -22,7 +26,9 @@ class Car {
 }
 const myCar = new Car("Honda", "black");
 console.log(myCar.brand, myCar.color);
-// 2) Constructor - example 1
+
+
+                    // 2) Constructor - example 1
 class Laptop {
     title;
     price;
@@ -31,9 +37,11 @@ class Laptop {
         this.price = price;
     }
 }
-const laptop = new Laptop("ThinkPad", 85000);
+const laptop = new Laptop("ThinkPad", 85);
 console.log(laptop.title, laptop.price);
+
 // Example 2
+
 class Player {
     name;
     game;
@@ -42,20 +50,11 @@ class Player {
         this.game = game;
     }
 }
-const player = new Player("Ali", "Cricket");
+const player = new Player("Hasan", "Cricket");
 console.log(player.name, "plays", player.game);
-// 3) Readonly - example 1
-class SchoolCard {
-    cardNumber;
-    studentName;
-    constructor(cardNumber, studentName) {
-        this.cardNumber = cardNumber;
-        this.studentName = studentName;
-    }
-}
-const card = new SchoolCard(104, "Sara");
-console.log(card.cardNumber, card.studentName);
-// Example 2
+
+                    // 3) Readonly - example 1
+
 class Order {
     orderNumber;
     item;
@@ -64,9 +63,11 @@ class Order {
         this.item = item;
     }
 }
-const order = new Order("ORD-21", "Headphones");
+const order = new Order("ORD1", "Bottle");
 console.log(order.orderNumber, order.item);
-// 4) Access modifiers - example 1: public and private
+
+                   // 4) Access modifiers - example 1: public and private
+
 class BankAccount {
     owner;
     pin;
@@ -80,7 +81,9 @@ class BankAccount {
 }
 const account = new BankAccount("Hamza", 1234);
 console.log(account.owner, account.checkPin(1234));
-// Example 2: protected can be used in a child class
+
+               // Example 2: protected can be used in a child class
+
 class Animal {
     name;
     constructor(name) {
@@ -94,33 +97,9 @@ class Dog extends Animal {
 }
 const dog = new Dog("Rocky");
 console.log(dog.introduce());
-// 5) Optional properties - example 1
-class Member {
-    name;
-    phone;
-    constructor(name, phone) {
-        this.name = name;
-        if (phone !== undefined) {
-            this.phone = phone;
-        }
-    }
-}
-const member = new Member("Noor");
-console.log(member.name, member.phone);
-// Example 2
-class Meetup {
-    title;
-    location;
-    constructor(title, location) {
-        this.title = title;
-        if (location !== undefined) {
-            this.location = location;
-        }
-    }
-}
-const meetup = new Meetup("Study group", "Library");
-console.log(meetup.title, meetup.location);
-// 6) Parameter properties - example 1
+               
+                     // 6) Parameter properties - example 1
+
 class Teacher {
     name;
     subject;
@@ -131,7 +110,11 @@ class Teacher {
 }
 const teacher = new Teacher("Mariam", "Math");
 console.log(teacher.name, teacher.subject);
+
+
+
 // Example 2
+
 class Product {
     name;
     price;
@@ -139,9 +122,7 @@ class Product {
         this.name = name;
         this.price = price;
     }
-    showPrice() {
-        return this.price;
-    }
+    
 }
 const product = new Product("Keyboard", 4500);
 console.log(product.name, product.showPrice());
